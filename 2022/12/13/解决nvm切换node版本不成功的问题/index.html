@@ -465,7 +465,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>​     在项目开发过程中，由于各种前端框架、插件以及nodejs、npm的飞速更新，在项目新开发或对老项目进行更新维护时，有些项目版本的配置和当前node环境不匹配，导致运行报错，甚至都无法启动。在公司前辈的介绍下，我了解到了nvm,nvm的出现就是为了解决以上问题的，nvm是一个Node.js的版本管理器,可以解决node各种版本存在不兼容问题,nvm其实是在同一台机器上根据需要,安装或切换项目所对应的node版本来适配项目。</p>
+                <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 解决nvm切换版本不成功的问题</span><br><span class="line">date: 2022-12-02 10:08:13</span><br><span class="line">tags:      </span><br></pre></td></tr></table></figure>
+
+<p>​        在项目开发过程中，由于各种前端框架、插件以及nodejs、npm的飞速更新，在项目新开发或对老项目进行更新维护时，有些项目版本的配置和当前node环境不匹配，导致运行报错，甚至都无法启动。在公司前辈的介绍下，我了解到了nvm,nvm的出现就是为了解决以上问题的，nvm是一个Node.js的版本管理器,可以解决node各种版本存在不兼容问题,nvm其实是在同一台机器上根据需要,安装或切换项目所对应的node版本来适配项目。</p>
 <p>​        nvm的下载安装在此不再赘述。<br>​        下载安装完成后配置一下node和npm的镜像地址。<br>在nvm安装目录，找到 setting.txt 文件加上如下两行:<br>node_mirror: <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>npm_mirror: <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
 <p>​         一般在安装node的时候，npm也会自动一起安装的。由于nvm可以管理多个版本的node，如果每次添加一个node版本都要安装一堆npm包就烦锁了，所以将npm全局共享出来，只需全局（在安装模块时 npm i xxx -g )加上-g， 就可以让各个版本的node共用就可以了。<br>​         当然npm全局安装目录也是可以修改的：使用：npm config set prefix “要设置的路径” 命令就可以修改！</p>
 <p>npm config set prefix “D:\nodejs\node_modules\node_global”</p>
